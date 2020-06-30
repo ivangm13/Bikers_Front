@@ -1,0 +1,185 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@400;700&family=Permanent+Marker&display=swap'); */
+/* font-family: 'Architects Daughter', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Permanent Marker', cursive; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Rubik+Mono+One&display=swap');
+
+/* font-family: 'Krona One', sans-serif;
+font-family: 'Rubik Mono One', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+li,
+a,
+button {
+  font-weight: 700;
+  font-size: 1em;
+  color: #edf0f1;
+  text-decoration: none;
+  font-family: 'Krona One', sans-serif
+}
+
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  width: auto;
+  height: 7em;
+  margin-left: 7em;
+}
+
+header .navbar{
+  background-color: #24252a;
+  display: flex;
+}
+
+
+.hamburguesa{
+  font-size: 1.250em;
+}
+
+.navbar ul li {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.navbar .line{
+  padding:0.438em;
+}
+
+.navbar-nav li .line:hover{
+  border-bottom: 2px solid #37a88b;
+}
+
+.navbar-nav li a:hover {
+  color: #37a88b;
+}
+
+.activa{
+  color: #37a88b;
+ 
+}
+
+button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.contact {
+  background-color: rgba(16, 140, 172, 0.8);
+}
+
+.logout{
+  background-color: #24252a;
+  border-radius: 50px;
+}
+
+.logout i{
+  color: #edf0f1;
+  font-size: 1.75em;
+  transition: all 0.3s ease 0s;
+  
+}
+
+.logout i:hover{
+  color: #af3939;
+}
+
+.contact:hover {
+  background-color: rgba(15, 183, 224, 0.8);
+}
+
+.newpost {
+  background-color: rgba(18, 146, 97, 0.8);
+}
+
+.newpost:hover {
+  background-color: rgba(48, 212, 149, 0.8);
+}
+
+.footer {
+  background-color: #24252a;
+}
+
+.redes {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.footer ul {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer ul li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer ul li p {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+li i {
+  color: rgb(24, 161, 216);
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.footer-copyright {
+  color: white;
+}
+
+@media (max-width: 600px){
+
+  .footer .redes ul .segundo{
+    margin: 0 1.2em;
+  }
+
+  .footer ul li p {
+    font-size: 0.825em;
+  }
+
+  .footer-copyright{
+    font-size: 0.7em;
+  }
+  .logo {
+   margin-left:3em ;
+  }
+
+  .navbar .line{
+  font-size: 1em;
+}
+  
+}
+
+@media (min-width: 601px) and (max-width: 1000px){
+
+    .navbar-nav{
+      margin-top: 1.2em;
+    }
+
+    .logo {
+      margin-left:3em ;
+    }
+
+    .navbar-nav .line{
+      font-size: 1em;
+    }
+     
+} 

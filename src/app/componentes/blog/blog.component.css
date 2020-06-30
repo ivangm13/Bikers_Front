@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.funciona{
+  cursor: pointer;
+}
+
+.vacio{
+  width: 100%;
+  text-align: center;
+  margin: 3% auto;
+  font-size: 2.5em;
+  color:rgb(109, 109, 109);
+  font-family: monospace; 
+  font-style: italic;
+}
+
+.card {
+  margin: 4%; 
+  border: none;
+  box-shadow: 0 4px 8px rgba(165, 165, 165, .6);
+  transition: 0.3s all ease;
+  position:relative;
+
+}
+
+.card:hover {
+  background-color: #ccc;
+}
+
+.cuerpo {
+  padding: 10px;
+  position: relative;
+}
+
+.fecha {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #25232A;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 20px;
+  height: auto;
+  padding: 10px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.posicion {
+  position: fixed;
+}
+
+.buscador {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+}
+
+.autor p {
+  background-color: #25232A;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 2px;
+
+}
+
+.titulo h2 {
+  text-align: center;
+  font-size: 50px;
+  background-color: #25232A;
+  color: #ccc;
+  opacity: 0.8;
+  width: 100%;
+  font-family: 'Krona One', sans-serif;
+}
+
+.barraBusqueda {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin: 0 auto;
+  height: 60px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.busqueda {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px; 
+  transition: width 0.4s linear;
+}
+
+.barraBusqueda>.busqueda {
+  padding: 0 10px;
+  width: 35vw;
+  caret-color: #37a88b;
+  transition: width 0.4s linear;
+}
+
+.barraBusqueda>.icon {
+  background: white;
+  color: #37a88b;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.post{
+  cursor: pointer;
+}
+
+.imagen{
+  width: 100%;
+  height: 15em;
+}
+
+@media(max-width:600px){
+
+  .vacio{
+    font-size: 0.825em
+  }
+
+}
+
+@media (min-width:601px) and (max-width:1024px){
+
+  .vacio{
+    font-size: 1.5em;
+  }
+
+}

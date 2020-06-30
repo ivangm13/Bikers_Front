@@ -1,0 +1,54 @@
+<h2 class="titulo">PERFIL</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="panel">
+                <div class="seguidores">
+                    <h5>Seguidores: {{seguidores}}</h5>
+                </div>
+                <div class="siguiendo">
+                    <h5>Siguiendo: {{siguiendo}}</h5>
+                </div>
+
+            </div>
+            <img src="../../assets/img/letras.png">
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <h3 class="titulo2">Editar Perfil</h3>
+            <div class="datos">
+                <form [formGroup]="formUpdate" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" formControlName="nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" name="apellidos" formControlName="apellidos" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" formControlName="email" class="form-control" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre de usuario</label>
+                        <input type="text" name="usuario" formControlName="username" class="form-control" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Ciudad</label>
+                        <input type="text" name="ciudad" formControlName="ciudad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                            formControlName="imagen" (change)="cambioArchivo($event)">
+                        <p *ngIf="!puede" class="error">Debes seleccionar una imagen para actualizar el perfil</p>
+                    </div>
+                    <input type="hidden" formControlName="id">
+                    <input type="hidden" formControlName="password">
+                    <input type="submit" class="btn btn-primary btn-small m-1" value="Guardar" [disabled]='!puede'>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

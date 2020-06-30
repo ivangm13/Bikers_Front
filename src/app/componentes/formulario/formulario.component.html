@@ -1,0 +1,49 @@
+<div class="titulo">
+    <h2>
+        CREAR POST
+    </h2>
+</div>
+<!-- titulo, descripcion, autor -->
+<div class="col-md-6 mt-5 mx-auto formularioC">
+    <div class="formulario ">
+        <form [formGroup]="formulario" (ngSubmit)="subirArchivo()" enctype=" multipart/form-data">
+            <div class="form-group row">
+                <label class="col-md-12 col-sm-12 col-sm-12 col-form-label">Titulo</label>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" placeholder="Introduce un Titulo a tu post"
+                        formControlName="titulo">
+                </div>
+                <p class="error col-md-10 col-sm-12 col-xs-12"
+                    *ngIf="formulario.controls.titulo.errors != null && formulario.controls.titulo.touched">
+                    El campo título es requerido y debe tener una longitud minima de 5 caracteres</p>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-12 col-form-label">Texto</label>
+                <div class="col-md-12">
+                    <textarea type="text" class="form-control" placeholder="Cuerpo del articulo"
+                        formControlName="texto"></textarea>
+                </div>
+                <p class="error col-md-10 col-sm-12 col-xs-12"
+                    *ngIf="formulario.controls.texto.errors != null && formulario.controls.texto.touched">
+                    El campo texto es obligatorio y debe tener una longitud mínima de 100 caracteres</p>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-12 col-form-label">Fecha</label>
+                <div class="col-md-11 mt-2 l">A fecha de {{fechaActual|date:'dd-MM-yyyy'}}</div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-12 col-form-label">Imagen</label>
+                <div class="col-md-11">
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" formControlName="archivo"
+                        (change)="cambioArchivo($event)">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3"
+                [disabled]="!formulario.valid || nombreArchivo==''">Enviar</button>
+            <input type="hidden" class="form-control-file" formControlName="fecha" value={{fechaActual}}>
+        </form>
+        <div class="bici">
+            <img src="../../../assets/img/logoBici.png" class="bici2">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+.login-img {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: left;
+
+}
+
+.contenedor{
+  min-height: 91.15vh;
+}
+
+.login-wrapper .login-btn {
+  padding: 13px 20px;
+  background-color: #25232A;
+  border-radius: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.login-title {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.login-wrapper .login-btn:hover {
+  border: 1px solid #25232A;
+  background-color: #fff;
+  color: #25232A;
+}
+
+.form-group input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+}
+
+.form-group label {
+  text-shadow: 2px 2px 4px #000;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+  padding-left: 10px;
+}
+
+.footer {
+  padding: 12px;
+}
+
+.footer div {
+  text-decoration: none;
+  color: #fff;
+  background-color: #25232A;
+  padding: 10px;
+}
+
+.footer div:hover {
+  text-decoration: none;
+  color: rgb(15, 183, 224);
+  cursor: pointer;
+}
+
+.borde {
+  margin-top: 7%;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.8),  -4px 0 10px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 600px) {
+
+.login-title{
+  display: none;
+}
+
+.forgot-password-link{
+  font-size: 0.7em;
+}
+
+.register{
+  font-size: 0.7em;
+}
+
+}
+
+@media (min-width:601px) and (max-width: 1024px){
+
+.forgot-password-link{
+  font-size: 0.7em;
+}
+
+.register{
+  font-size: 0.7em;
+}
+
+.contenedor{
+  min-height: 0;
+} 
+
+}

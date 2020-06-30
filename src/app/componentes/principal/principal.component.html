@@ -1,0 +1,22 @@
+<div class="cabecera">
+    <img class="logo" src="../../../assets/img/bikers_logo_blanco.png" alt="">
+    <img class="letras" src="../../../assets/img/Bikers-letras_blanco.png" alt="">
+    <img class="logo2" src="../../../assets/img/bikers_logo_blanco.png" alt="">
+</div>
+<div class="form">
+    <ul class="grupo">
+        <li class="boton" (click)="mostrar(false)">REGISTRATE</li>
+        <li class="boton" (click)="mostrar(true)">INICIA SESION</li>
+    </ul>
+
+    <div class="content">
+        <div id="register" *ngIf="!registroValor">
+            <app-register></app-register>
+        </div>
+        <div id="login" *ngIf="registroValor"> 
+             
+            <app-login></app-login>
+        </div>
+    </div>
+
+</div>

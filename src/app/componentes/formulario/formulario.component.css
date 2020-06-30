@@ -1,0 +1,42 @@
+input.ng-valid.ng-touched{
+    border: 2px solid greenyellow;
+}
+
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+.error{
+    color: red;
+    font-size: 0.825em;
+}
+.titulo h2 {
+    text-align: center;
+    font-size: 50px;
+    background-color: #25232A;
+    color: #ccc;
+    opacity: 0.8;
+    width: 100%;
+    font-family: 'Krona One', sans-serif;
+  }
+
+.bici{
+    width: 50%;
+    margin: 0 auto;
+} 
+
+.bici2{
+    width:100%
+}
+
+.formulario label{
+    
+    color: #37a88b;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+}
+.formularioC{
+    background-color: rgb(243, 241, 241);
+    margin-bottom: 2em;
+}

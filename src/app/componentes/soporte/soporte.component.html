@@ -1,0 +1,85 @@
+<div class="titulo">
+    <h2>
+        CONTACTO
+    </h2>
+</div>
+<div class="container mt-5 mb-5">
+    <h3 class="mb-3">Preguntas frecuentes</h3>
+    <div class="accordion" id="accordion1">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button id="1" class="btn  btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                        >
+                        ¿Cómo encuentro amigos?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion1">
+                <div class="card-body">
+                    Para buscar y añadir amigos deber dirigirte a la pestaña buscador y escribir el nombre o el nombre
+                    de usuario de la persona que deseas encontrar.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                        >
+                        ¿Cómo escribo un artículo en el blog?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion1">
+                <div class="card-body">
+                    Solamente pueden escribir entradas en el blog determinados usuarios con servicios privilegiados.
+                    Para comprobar si puedes pertenecer al colectivo de usuarios que pueden escribir en el blog, rellena
+                    el cuestionario de contacto y en breve nos pondremos en contacto contigo.
+                </div>
+            </div>
+        </div> 
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn  btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                        >
+                        ¿Como cambio mi nombre de usuario?
+                    </button>
+                </h2>
+            </div> 
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion1">
+                <div class="card-body">
+                    Lamentablemente, no es posible cambiar el nombre de usuario actualmente. Si deseas obtener más información acerca de este tema, envíanos tu consulta y te atenderemos encantados!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <h3 class="mt-5 mb-5">¡Envíanos tu consulta!</h3>
+    </div>
+    <form  (ngSubmit)='contactForm(form.value)' #form='ngForm'>
+        <div class="form-group col-md-6 d-inline-block">
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="nombre" ngModel>
+        </div>
+        <div class="form-group col-md-6 d-inline-block">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" ngModel>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Motivo de tu consulta</label>
+            <input type="text" class="form-control" name="motivoConsulta" ngModel>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Consulta</label>
+            <textarea type="textbox" class="form-control" name="consulta" ngModel rows="5"></textarea>
+        </div>
+        <div class="col text-center">
+            <input type="submit" value="Enviar" class="btn btn-outline-info col-md-12">
+        </div>
+    </form>
+</div>

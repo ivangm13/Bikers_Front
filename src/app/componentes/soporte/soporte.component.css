@@ -1,0 +1,15 @@
+.card-header {
+    background-color: #24252A;
+}
+.card-header h2 button{
+color: white ;
+}
+.titulo h2 {
+    text-align: center;
+    font-size: 50px;
+    background-color: #25232A;
+    color: #ccc;
+    opacity: 0.8;
+    width: 100%;
+    font-family: 'Krona One', sans-serif;
+  }

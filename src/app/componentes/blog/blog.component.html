@@ -1,0 +1,31 @@
+<!-- main --->
+<!-- seccion blog donde se encuentran todos los posts -->
+
+<div class="titulo">
+    <h2>
+        BLOG
+    </h2>
+</div>
+<div class="col-12 mt-4 d-flex">
+    <div class="barraBusqueda">
+        <input class="busqueda" type="text" name="" placeholder="Buscar..." (keyup)="buscarPost($event)">
+        <a class="icon"><i class="fas fa-search"></i></a>
+    </div>
+</div>
+
+<p class="vacio" *ngIf="arrFiltrados.length===0">No se han encontrado publicaciones</p>
+
+<div class="post row col-12">
+    <!-- Arreglar click -->
+    <div class="card col-sm-12 col-md-3" (click)="clickBlog(blog.id)" *ngFor="let blog of arrFiltrados">
+        <img class="imagen" src="{{blog.imagen}}">
+        <div class="fecha">{{blog.fecha}}</div>
+        <div class="cuerpo">
+            <h5 class="title">{{blog.titulo}}</h5>
+            <!-- <p class="text">{{blog.texto}}</p> -->
+        </div>
+
+    </div>
+
+
+</div>

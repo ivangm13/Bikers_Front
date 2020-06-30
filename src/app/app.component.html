@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <header *ngIf="(this.router.url!=='/principal')&&(this.router.url!=='/principal/register')&&(this.router.url!=='/recuperar')">
+    <!-- Menu de navegacion -->
+
+
+    <!--  <h1 class="logo">BIKERS</h1> -->
+    <nav class="navbar navbar-expand-xl">
+      <img class="logo" src="assets/img/bikers_logo_blanco.png" [routerLink]="['/home']">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-inverse"><i class="fa fa-bars hamburguesa" aria-hidden="true"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link line" [routerLink]="['/home']" routerLinkActive="activa">HOME</a></li>
+          <li class="nav-item"><a class="nav-link line" [routerLink]="['/blog']" routerLinkActive="activa">BLOG</a></li>
+          <li class="nav-item"><a class="nav-link line" [routerLink]="['/browser']"
+              routerLinkActive="activa">USUARIOS</a>
+          </li>
+          <li class="nav-item"><a class="nav-link line" [routerLink]="['/profile']" routerLinkActive="activa">PERFIL</a>
+          </li>
+          <li class="nav-item" *ngIf="rol==='admin'"><a class="nav-link" [routerLink]="['/newPost']"><button
+                class="newpost">CREAR POST</button>
+            </a></li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/support']"><button class="contact">CONTACTO</button> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick()"><button class="logout"><i
+                  class="fas fa-sign-out-alt"></i></button></a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!-- main -->
+  <!-- <app-login></app-login>
+  <app-register></app-register> -->
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="footer">
+    <div class="redes">
+      <ul>
+        <li class="mt-3"><a href="https://www.linkedin.com/in/javier-garcia-gonjal" target="_blank"><i
+              class="fab fa-linkedin"></i></a>
+          <p>Javier García</p>
+        </li>
+        <li class="mt-3"><a href="https://www.linkedin.com/in/jonathanlopezhernandez/" target="_blank"><i
+              class="fab fa-linkedin segundo"></i></a>
+          <p>Jonathan López</p>
+        </li>
+        <li class="mt-3"><a href="https://www.linkedin.com/in/ivan-gm/" target="_blank"><i
+              class="fab fa-linkedin tercero"></i></a>
+          <p>Iván García</p>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      <p>© 2020 Copyright</p>
+      <p>bikersaskus@gmail.com</p>
+    </div>
+  </footer>
+</div>
